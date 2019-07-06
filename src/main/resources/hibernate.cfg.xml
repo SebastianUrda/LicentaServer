@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url" >
+            jdbc:mysql://localhost:3306/licenta
+        </property>
+        <property name="hibernate.connection.useSSL">false</property>
+        <property name="hibernate.connection.autoReconnect">true</property>
+        <property name="connection.autoReconnect">true</property>
+        <property name="connection.autoReconnectForPools">true</property>
+        <property name="connection.is-connection-validation-required">true</property>
+
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            sebi
+        </property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+        <mapping class="entity.DataA"/>
+        <mapping class="entity.UserA"/>
+        <mapping class="entity.SensorA"/>
+        <mapping class="entity.DeviceA"/>
+        <mapping class="entity.QuestionA"/>
+        <mapping class="entity.AnswerA"/>
+        <mapping class="entity.ObservationA"/>
+        <mapping class="entity.AlertA"/>
+
+
+    </session-factory>
+</hibernate-configuration>
